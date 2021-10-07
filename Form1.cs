@@ -16,6 +16,8 @@ namespace PaperScissorsRock
         Random generator = new Random();
         int result;
         int score;
+        int yourscore;
+        int enemyscore;
         
         public PaperScissorsRock()
         {
@@ -25,6 +27,8 @@ namespace PaperScissorsRock
         private void PaperScissorsRock_Load(object sender, EventArgs e)
         {
             score = 10;
+            yourscore = 0;
+            enemyscore = 0;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             lblScore.Text = ("You have " + score + " points..");
             numBetting.Maximum = score;
@@ -55,6 +59,8 @@ namespace PaperScissorsRock
                 score = (score - (int)numBetting.Value);
                 lblScore.Text = ("You have " + score + " points..");
                 numBetting.Maximum = score;
+                enemyscore = enemyscore + 1;
+                lblEnemyScore.Text = ("The Enemy has won " + enemyscore + " times..");
             }
             else
             {
@@ -64,6 +70,8 @@ namespace PaperScissorsRock
                 score = (score + ((int)numBetting.Value * 2));
                 lblScore.Text = ("You have " + score + " points..");
                 numBetting.Maximum = score;
+                yourscore = yourscore + 1;
+                lblYourScore.Text = ("You have won " + yourscore + " times..");
             }
         }
 
@@ -79,6 +87,8 @@ namespace PaperScissorsRock
                 score = (score + ((int)numBetting.Value * 2));
                 lblScore.Text = ("You have " + score + " points..");
                 numBetting.Maximum = score;
+                yourscore = yourscore + 1;
+                lblYourScore.Text = ("You have won " + yourscore + " times..");
             }
             else if (result == 2)
             {
@@ -95,6 +105,8 @@ namespace PaperScissorsRock
                 score = (score - (int)numBetting.Value);
                 lblScore.Text = ("You have " + score + " points..");
                 numBetting.Maximum = score;
+                enemyscore = enemyscore + 1;
+                lblEnemyScore.Text = ("The Enemy has won " + enemyscore + " times..");
             }
         }
 
@@ -110,6 +122,8 @@ namespace PaperScissorsRock
                 score = (score - (int)numBetting.Value);
                 lblScore.Text = ("You have " + score + " points..");
                 numBetting.Maximum = score;
+                enemyscore = enemyscore + 1;
+                lblEnemyScore.Text = ("The Enemy has won " + enemyscore + " times..");
             }
             else if (result == 2)
             {
@@ -119,6 +133,8 @@ namespace PaperScissorsRock
                 score = (score + ((int)numBetting.Value * 2));
                 lblScore.Text = ("You have " + score + " points..");
                 numBetting.Maximum = score;
+                yourscore = yourscore + 1;
+                lblYourScore.Text = ("You have won " + yourscore + " times..");
             }
             else
             {

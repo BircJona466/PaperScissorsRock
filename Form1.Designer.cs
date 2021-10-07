@@ -41,6 +41,8 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.numBetting = new System.Windows.Forms.NumericUpDown();
             this.lblHowMuch = new System.Windows.Forms.Label();
+            this.lblYourScore = new System.Windows.Forms.Label();
+            this.lblEnemyScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBetting)).BeginInit();
@@ -211,13 +213,37 @@
             this.lblHowMuch.TabIndex = 13;
             this.lblHowMuch.Text = "How much would you like to bet?";
             // 
+            // lblYourScore
+            // 
+            this.lblYourScore.AutoSize = true;
+            this.lblYourScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblYourScore.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYourScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblYourScore.Location = new System.Drawing.Point(31, 582);
+            this.lblYourScore.Name = "lblYourScore";
+            this.lblYourScore.Size = new System.Drawing.Size(0, 17);
+            this.lblYourScore.TabIndex = 14;
+            // 
+            // lblEnemyScore
+            // 
+            this.lblEnemyScore.AutoSize = true;
+            this.lblEnemyScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblEnemyScore.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnemyScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblEnemyScore.Location = new System.Drawing.Point(523, 591);
+            this.lblEnemyScore.Name = "lblEnemyScore";
+            this.lblEnemyScore.Size = new System.Drawing.Size(0, 17);
+            this.lblEnemyScore.TabIndex = 15;
+            // 
             // PaperScissorsRock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PaperScissorsRock.Properties.Resources.lined_paper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(778, 551);
+            this.ClientSize = new System.Drawing.Size(778, 632);
+            this.Controls.Add(this.lblEnemyScore);
+            this.Controls.Add(this.lblYourScore);
             this.Controls.Add(this.lblHowMuch);
             this.Controls.Add(this.numBetting);
             this.Controls.Add(this.lblScore);
@@ -257,6 +283,8 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.NumericUpDown numBetting;
         private System.Windows.Forms.Label lblHowMuch;
+        private System.Windows.Forms.Label lblYourScore;
+        private System.Windows.Forms.Label lblEnemyScore;
     }
 }
 
